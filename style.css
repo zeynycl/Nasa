@@ -1,0 +1,163 @@
+/* Renk Paleti Değişkenleri (Aynı Kalır) */
+/* Renk Paleti Değişkenleri (Aynı Kalır) */
+:root {
+    --color-main-green: #cae7d3; 
+    --color-light-green-1: #98C898; 
+    --color-light-green-2: #C0E8C0; 
+    --color-background: #F0FAF0; 
+    --color-white: #FFFFFF; 
+    --color-text-dark: #333333;
+    --color-gplant-orange: #85ff7c; 
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: var(--color-text-dark);
+    
+    /* ARKA PLAN RESMİ KODLARI BURADA BAŞLIYOR */
+    background-image: url('yeniarkaplan3.png'); /* !!! Kendi görsel dosya adınızı buraya yazın !!! */
+    background-repeat: no-repeat; /* Görselin tekrar etmesini engelle */
+    background-size: cover; /* Görseli, tüm ekranı kaplayacak şekilde boyutlandır */
+    background-position: center center; /* Görseli ortala */
+    background-attachment: fixed; /* Ekranı kaydırınca görselin sabit kalmasını sağla */
+    /* ARKA PLAN RESMİ KODLARI BURADA BİTİYOR */
+    height: 100vh;
+}
+
+.container {
+    /* ... (Geri kalan kodunuz aynı) */
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 800px;
+    height: 95vh;
+    /* Arka plan resminin altında kalması için container'ın arka plan rengi sabit tutuldu */
+    background-color: var(--color-white); 
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.8);
+    background-position: center;
+}
+
+/* ... (Geri kalan tüm CSS kurallarınız burada devam ediyor) ... */
+
+/* 1. LOGO ALANI (LOGO BÜYÜK AMA BAR İNCE) */
+.logo-area {
+    /* İNCELİK AYARI: Barın yüksekliğini sınırlamak için padding küçültüldü */
+    height: 58px;
+    background-color: var(--color-main-green);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start; 
+    /* Logo taşmasını kontrol etmek için gizleme kapatıldı */
+    overflow: visible; 
+    position: relative; 
+    padding-left: 60px;
+}
+
+.header-logo {
+    /* LOGO DAHA BÜYÜK YAPILDI */
+    height: 51px; /* Daha da büyük bir değer */
+    width: auto;
+    display: block;
+    /* LOGO YERLEŞİMİ: Logoyu barın merkezine hizalamak için negatif margin ve absolute konum kullanıldı */
+    position: absolute; 
+    top: 47%;
+    transform: translateY(-50%);
+    left: 10px; /* Sol padding kadar içeride başla */
+    
+}
+
+.gplant-title {
+    margin: 0;
+    /* Yazının logodan sonra başlaması için boşluk bırakıldı */
+    margin-left: 100px; /* Logoyu geçecek kadar margin eklendi (Logonun genişliği + boşluk) */
+    font-size: 2.2sem;
+    font-weight: bold;
+    color: var(--color-gplant-orange); 
+    letter-spacing: 1px;
+}
+
+/* 2. SOHBET ALANI */
+.chat-container {
+    flex-grow: 1;
+    padding: 25px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+}
+
+/* Mesaj Stilleri */
+.message {
+    max-width: 80%;
+    padding: 12px 18px;
+    border-radius: 20px;
+    line-height: 1.5;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.user-message {
+    align-self: flex-end;
+    background-color: var(--color-light-green-1);
+    color: var(--color-white); 
+}
+
+.bot-message {
+    align-self: flex-start;
+    background-color: var(--color-light-green-2);
+    color: var(--color-text-dark);
+}
+
+/* 3. INPUT ALANI */
+.input-area {
+    display: flex;
+    padding: 25px; 
+    background-color: var(--color-white);
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.05); 
+}
+
+#userInput {
+    flex-grow: 1;
+    padding: 15px 20px;
+    border: 1px solid var(--color-light-green-2);
+    border-radius: 30px;
+    font-size: 1em;
+    outline: none;
+    transition: all 0.3s;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+#userInput:focus {
+    border-color: var(--color-main-green);
+    box-shadow: 0 0 0 3px rgba(240, 138, 84, 0.3);
+}
+
+.input-area button {
+    margin-left: 15px;
+    padding: 15px 30px;
+    background-color: var(--color-main-green);
+    color: var(--color-white);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.input-area button:hover {
+    background-color: #f897d8;
+}
+
+.input-area button:active {
+    transform: scale(0.98);
+}
