@@ -1,5 +1,4 @@
-/* Renk Paleti Değişkenleri (Aynı Kalır) */
-/* Renk Paleti Değişkenleri (Aynı Kalır) */
+
 :root {
     --color-main-green: #cae7d3; 
     --color-light-green-1: #98C898; 
@@ -20,24 +19,24 @@ body {
     height: 100vh;
     color: var(--color-text-dark);
     
-    /* ARKA PLAN RESMİ KODLARI BURADA BAŞLIYOR */
-    background-image: url('yeniarkaplan3.png'); /* !!! Kendi görsel dosya adınızı buraya yazın !!! */
-    background-repeat: no-repeat; /* Görselin tekrar etmesini engelle */
-    background-size: cover; /* Görseli, tüm ekranı kaplayacak şekilde boyutlandır */
-    background-position: center center; /* Görseli ortala */
-    background-attachment: fixed; /* Ekranı kaydırınca görselin sabit kalmasını sağla */
-    /* ARKA PLAN RESMİ KODLARI BURADA BİTİYOR */
+    
+    background-image: url('yeniarkaplan3.png'); 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: center center; 
+    background-attachment: fixed; 
+    
     height: 100vh;
 }
 
 .container {
-    /* ... (Geri kalan kodunuz aynı) */
+    
     display: flex;
     flex-direction: column;
     width: 90%;
     max-width: 800px;
     height: 95vh;
-    /* Arka plan resminin altında kalması için container'ın arka plan rengi sabit tutuldu */
+    
     background-color: var(--color-white); 
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -46,47 +45,47 @@ body {
     background-position: center;
 }
 
-/* ... (Geri kalan tüm CSS kurallarınız burada devam ediyor) ... */
 
-/* 1. LOGO ALANI (LOGO BÜYÜK AMA BAR İNCE) */
+
+
 .logo-area {
-    /* İNCELİK AYARI: Barın yüksekliğini sınırlamak için padding küçültüldü */
+    
     height: 58px;
     background-color: var(--color-main-green);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     display: flex;
     align-items: center; 
     justify-content: flex-start; 
-    /* Logo taşmasını kontrol etmek için gizleme kapatıldı */
+    
     overflow: visible; 
     position: relative; 
     padding-left: 60px;
 }
 
 .header-logo {
-    /* LOGO DAHA BÜYÜK YAPILDI */
-    height: 51px; /* Daha da büyük bir değer */
+    
+    height: 51px; 
     width: auto;
     display: block;
-    /* LOGO YERLEŞİMİ: Logoyu barın merkezine hizalamak için negatif margin ve absolute konum kullanıldı */
+    
     position: absolute; 
     top: 47%;
     transform: translateY(-50%);
-    left: 10px; /* Sol padding kadar içeride başla */
+    left: 10px; 
     
 }
 
 .gplant-title {
     margin: 0;
-    /* Yazının logodan sonra başlaması için boşluk bırakıldı */
-    margin-left: 100px; /* Logoyu geçecek kadar margin eklendi (Logonun genişliği + boşluk) */
+    
+    margin-left: 100px; 
     font-size: 2.2sem;
     font-weight: bold;
     color: var(--color-gplant-orange); 
     letter-spacing: 1px;
 }
 
-/* 2. SOHBET ALANI */
+
 .chat-container {
     flex-grow: 1;
     padding: 25px;
@@ -96,7 +95,7 @@ body {
     gap: 15px; 
 }
 
-/* Mesaj Stilleri */
+
 .message {
     max-width: 80%;
     padding: 12px 18px;
@@ -117,7 +116,7 @@ body {
     color: var(--color-text-dark);
 }
 
-/* 3. INPUT ALANI */
+
 .input-area {
     display: flex;
     padding: 25px; 
